@@ -1,12 +1,23 @@
 <template>
-  <div id="app" bg grey1>
-    <router-view></router-view>
+  <div id="app">
+    <!-- 顶部 -->
+    <top />
+    <index />
   </div>
 </template>
 
-<style>
-.app {
-  width: 100vw;
-  height: 100vh;
-}
+<script>
+import top from './components/001.top.vue';
+import index from './components/002.index.vue';
+export default {
+  name: 'app',
+  components: {
+    top,
+    index
+  }
+};
+</script>
+
+<style >
+
 </style>

@@ -3,12 +3,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.config.productionTip = false
+// 导入 Element_ui
+import ElementUI from 'element-ui'
+// 导入 Element-ui 样式
+import 'element-ui/lib/theme-chalk/index.css'
+// 插件 Element-ui
+Vue.use(ElementUI)
 
-import './style.scss'
+// 导入全局初始化样式
+import './assets/index.css'
 
-import http from '../http'
-Vue.prototype.$http = http;
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
 new Vue({
   router,
